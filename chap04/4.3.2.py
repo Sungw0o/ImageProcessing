@@ -10,7 +10,7 @@ pt1, pt2 = (50, 200), (50, 260)  # 문자열 위치 좌표
 image = np.zeros((300, 500, 3), np.uint8)
 image.fill(255)
 
-# 텍스트 추가
+# 텍스트 추가 각각 글꼴 스타일 정의
 cv2.putText(image, "SIMPLEX", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 2, brown)
 cv2.putText(image, "DUPLEX", (50, 130), cv2.FONT_HERSHEY_DUPLEX, 3, olive)
 cv2.putText(image, "TRIPLEX", pt1, cv2.FONT_HERSHEY_TRIPLEX, 2, violet)

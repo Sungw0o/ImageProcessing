@@ -4,10 +4,15 @@ import matplotlib.pyplot as plt
 image  = cv2.imread("images/matplot.jpg", cv2.IMREAD_COLOR)
 if image is None: raise Exception("영상 파일 읽기 에러")
 
+# 이미지를 불러온 후 이미지의 높이와 너비를 가져옴
 rows, cols = image.shape[:2]
+
+# 이미지를 BGR에서 RGB로 변환
 rgb_img = cv2.cvtColor(image,cv2.COLOR_BGR2RGB)
+# 이미즈를 그레이 스케일로 변환 : 흑백 이미지 처리
 gray_img = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
 
+# 각각 서브플롯으로 나눠 출력함
 fig = plt.figure(num=1, figsize=(3,4))
 plt.imshow(image ), plt.title('figure1- original(bgr)')
 plt.axis('off'), plt.tight_layout()

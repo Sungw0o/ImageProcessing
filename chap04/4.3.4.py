@@ -18,7 +18,7 @@ size = (120, 60)  # 타원 크기 (반지름 값)
 cv2.circle(image, pt1, 1, 0, 2)
 cv2.circle(image, pt2, 1, 0, 2)
 
-# 타원 그리기
+# 타원 그리기 (그림, 중심좌표, 크기, 회전각도, 시작 각도, 끝 각도, 색상, 두께)
 cv2.ellipse(image, pt1, size, 0, 0, 360, blue, 1)  # 전체 타원
 cv2.ellipse(image, pt2, size, 90, 0, 360, blue, 1)
 cv2.ellipse(image, pt1, size, 0, 30, 270, orange, 4)  # 호 그리기

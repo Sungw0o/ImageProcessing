@@ -9,8 +9,8 @@ def onChange(value):												# 트랙바 콜백 함수
     add_value = value - int(image[0][0])        	# 트랙바 값과 영상 화소값 차분
     print("추가 화소값:", add_value)
 
-    image[:] = image + add_value            		# 행렬과 스칼라 덧셈 수행
-    cv2.imshow(title, image)
+    image[:] = image + add_value            		# 행렬과 스칼라 덧셈 수행 (밝기 값을 조정)
+    cv2.imshow(title, image) # 이미지 업데이트 후 다시 표시
 
 image = np.zeros((300, 500), np.uint8)           	# 영상 생성
 
