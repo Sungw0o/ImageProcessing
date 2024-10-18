@@ -3,8 +3,8 @@ import numpy as np, cv2
 x = np.array([1, 2, 3, 5, 10], np.float32)            # 리스트를 numpy array로 변환
 y = np.array([2, 5, 7, 2, 9]).astype("float32")
 
-mag = cv2.magnitude(x, y)                   # 크기 계산
-ang = cv2.phase(x, y)                       # 각도(방향) 계산
+mag = cv2.magnitude(x, y)                   # 백터의 크기 계산   sqrt(x^2 + y^2)
+ang = cv2.phase(x, y)                       # 벡터의 각도(방향) 계산
 p_mag, p_ang  = cv2.cartToPolar(x, y)  # 극좌표로 변환
 x2, y2 = cv2.polarToCart(p_mag, p_ang)  # 직교좌표로 변한
 

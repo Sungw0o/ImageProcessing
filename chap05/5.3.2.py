@@ -5,10 +5,10 @@ v2 = np.array([[1], [2], [3]], np.float32)      # 2차원 리스트로(3행, 1�
 v3 = np.array([[1, 2, 3]], np.float32)        	# 2차원 리스트로(1행, 3열) - 일반 행렬
 
 # OpenCV 산술 연산 함수는 numpy array만 가능함
-v1_exp = cv2.exp(v1)                             # 벡터에 대한
+v1_exp = cv2.exp(v1)                             # 행렬의 각 원소에 대한 지수 계산을 수행함
 v2_exp = cv2.exp(v2)                             # 행렬에 대한 지수 계산
 v3_exp = cv2.exp(v3)                             # 행렬에 대한 지수 계산
-log = cv2.log(v1)                             # 로그 계산
+log = cv2.log(v1)                             # 로그 계산 자연 로그 계산
 sqrt= cv2.sqrt(v2)                            # 제곱근 계산
 pow = cv2.pow(v3, 3)                          # 3의 거듭제곱 계산
 

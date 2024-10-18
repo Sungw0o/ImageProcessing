@@ -7,12 +7,12 @@ if image is None:
 
 # 마스크 생성 및 관심 영역 설정
 mask = np.zeros(image.shape[:2], np.uint8)
-mask[60:160, 20:120] = 255  # 관심 영역을 지정한 후, 255를 할당
+mask[60:160, 20:120] = 255  # 관심 영역을 지정한 후(사각형 영역), 255를 할당
 
 # 채널별 합 및 평균 계산
 sum_value = cv2.sumElems(image)  # 채널별 합 구하기
 mean_value1 = cv2.mean(image)    # 전체 평균 계산
-mean_value2 = cv2.mean(image, mask)  # 마스크가 255인 영역의 평균 계산
+mean_value2 = cv2.mean(image, mask)  # 마스크가 적용된 영역의 평균 계산
 
 # 결과 출력
 print('sum_value 자료형:', type(sum_value), type(sum_value[0]))
@@ -35,3 +35,6 @@ print("[stddev2] = ", stddev2.flatten())
 cv2.imshow("image", image)
 cv2.imshow("mask", mask)
 cv2.waitKey(0)
+
+# 이미지의 전체 영역과 마스크로 지정된 특정 영역에서 합계, 평균, 표준편차 등을 계산함
+# 마스크를 통해 특정 관심 영역에 대해 연산을 수행하고, 해당 부분에 대한 통계 값을 얻을 수 있음

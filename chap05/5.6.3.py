@@ -1,14 +1,17 @@
 import numpy as np, cv2
 
 
+# 행렬 선언
 data = [ 3, 0, 6, -3, 4, 2, -5,-1, 9]				    # 1차원 리스트 생성
 m1 = np.array(data, np.float32).reshape(3,3)
 m2 = np.array([36, 10, 28], np.float32)
 
+# 역행렬 계싼
 ret, inv = cv2.invert(m1, cv2.DECOMP_LU)                # 역행렬 계산
 if ret:
+    # 넘파이의 행렬 곱 함수
     dst1 = inv.dot(m2)                                  # numpy 제공 행렬곱 함수
-    dst2 = cv2.gemm(inv, m2, 1, None, 1)                # OpenC 제공 행렬곱 함수
+    dst2 = cv2.gemm(inv, m2, 1, None, 1)                # OpenCv 제공 행렬곱 함수
     ret, dst3 = cv2.solve(m1, m2, cv2.DECOMP_LU)        # 연립방정식 풀이
 
     print("[inv] = \n%s\n" % inv)

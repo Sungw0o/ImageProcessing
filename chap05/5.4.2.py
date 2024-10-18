@@ -16,6 +16,11 @@ print("[m1] = \n%s\n" % m1)
 print("[m_min] = \n%s\n" % m_min)
 print("[m_max] = \n%s\n" % m_max)
 
+
+
 # min_loc와 max_loc 좌표는 (y, x)이므로 행렬의 좌표 위차와 반대임
 print("m1 행렬 최솟값 좌표 %s, 최솟값: %d" %(min_loc, min_val) )
 print("m1 행렬 최댓값 좌표 %s, 최댓값: %d" %(max_loc, max_val) )
+
+# m1,m2 두 행렬에 대해 각 원소간의 최솟값과 최댓값을 계산
+# 특정 행렬의 최솟값과 최댓값을 찾아내고 그 좌표 함께 출력함

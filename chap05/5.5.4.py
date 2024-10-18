@@ -23,3 +23,5 @@ idx = cv2.sortIdx(areas, cv2.SORT_EVERY_COLUMN + cv2.SORT_DESCENDING).flatten()
 
 print_rects(rects)
 print_rects(rects[idx.astype('int')])
+
+# 랜덤 좌표 생성, 사각형 넓이 계산, 사각형 정렬, 결과 출력
