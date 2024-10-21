@@ -29,4 +29,4 @@ while True:  # 무한 반복
     title = "View Frame from Camera"
     cv2.imshow(title, frame)  # 윈도우에 영상 띄우기
 
-capture.release()
+capture.release() # 카메라 연결을 해제하고 자원을 반환 함

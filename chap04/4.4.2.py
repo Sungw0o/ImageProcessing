@@ -20,16 +20,6 @@ print_matInfo(title1, color2gray)
 print_matInfo(title2, color2color)
 
 # 이미지 시각화
-plt.figure(figsize=(10, 5))
-
-plt.subplot(1, 2, 1)
-plt.imshow(color2gray, cmap='gray')
-plt.title(title1)
-plt.axis('off')
-
-plt.subplot(1, 2, 2)
-plt.imshow(cv2.cvtColor(color2color, cv2.COLOR_BGR2RGB))
-plt.title(title2)
-plt.axis('off')
-
-plt.show()
+cv2.imshow(title1, color2gray)
+cv2.imshow(title2, color2color)
+cv2.waitKey(0)

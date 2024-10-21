@@ -19,6 +19,6 @@ title1, title2 = "Mouse Event1", "Mouse Event2"
 cv2.imshow(title1, image)
 cv2.imshow(title2, image)
 
-cv2.setMouseCallback(title1, onMouse)
+cv2.setMouseCallback(title1, onMouse) # 이벤트 발생하는 윈도우 이름, 콜백 함수, 이벤트 처리 함수로 전달할 추가적인 사용자 정의 인수
 cv2.waitKey(0)
 cv2.destroyAllWindows()
